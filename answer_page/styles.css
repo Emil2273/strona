@@ -12,7 +12,7 @@ body{
   color: white;
   
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 2fr 50px 1fr;
 
   /* position the div in center */
@@ -24,26 +24,6 @@ body{
   justify-content: center;
   text-align: center;
   align-items: center;
-}
-
-@media screen and (max-width: 700px){
-  #answer {
-    width: 100%;
-    border: none;
-    display: block;
-  }
-  #word {
-    font-size: 32pxpx;
-  }
-  #answer_text {
-    font-size: 16px;
-  }
-  #answer_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-  }
 }
 
 #score {
@@ -88,9 +68,30 @@ body{
   font-size: 32px;
   min-height: 50px;
   min-width: 200px;
-  width: 20vw;
+  width: 100vw;
+  max-width: 350px;
   text-align: center;
 
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 700px){
+  #answer {
+    width: 100%;
+    border: none;
+    display: block;
+  }
+  #word {
+    font-size: 24px;
+  }
+  #answer_text {
+    font-size: 24px;
+  }
+  #answer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
 }
