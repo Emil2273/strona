@@ -1,69 +1,77 @@
 
 body{
-  background-color: rgb(41, 37, 56);
+  background-color: #151b29;
+
+  display: block;
+  
+}
+
+main, nav{
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background: none;
+  padding: 1em 2em;
+  color: #6360ff;
+  margin: 2em;
+  border: 2px solid;
+  border-radius: 0.5em;
+  transition: all 0.3s;
+  font-size: 1em;
+}
+
+button:hover {
+  color: white;
+  border-color: #f1ff5c;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  border-radius: 1.5em;
+  transform: translateY(-0.5em);
+  cursor: pointer;
 }
 
 #answer {
   width: 50vw;
+  min-width: 600px;
   height: 70vh;
 
-  border: solid rgb(255, 255, 255) 3px;
-  border-radius: 5px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 1em;
   color: white;
   
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 2fr 50px 1fr;
 
-  /* position the div in center */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
+  
   justify-content: center;
   text-align: center;
   align-items: center;
 }
 
-@media screen and (max-width: 700px){
-  #answer {
-    width: 100%;
-    border: none;
-    display: block;
-  }
-  #word {
-    font-size: 32pxpx;
-  }
-  #answer_text {
-    font-size: 16px;
-  }
-  #answer_box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-  }
-}
-
 #score {
+  display: flex;
+  justify-content: space-around;
   font-size: 26px;
   min-width: 5vw;
   height: auto;
 }
 
 #correct_score {
+  display: inline-block;
   color: green;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #incorrect_score {
+  display: inline-block;
   color: red;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #word {
-  font-size: 56px;
+  font-size: 42px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   grid-column-start: 2;
 }
@@ -75,7 +83,6 @@ body{
 }
 
 #answer_box {
-  
   grid-column-start: 2;
   grid-row-start: 3;
 
@@ -87,10 +94,34 @@ body{
 #answer_text {
   font-size: 32px;
   min-height: 50px;
-  min-width: 200px;
-  width: 20vw;
   text-align: center;
-
+  border: 2px solid;
+  border-radius: 0.5em;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
+  transition: border-radius 1s;
+}
+
+#answer_text:focus {
+  border-radius: 1em;
+}
+
+@media screen and (max-width: 700px){
+  #answer {
+    width: 100%;
+    border: none;
+    display: block;
+  }
+  #word {
+    font-size: 24px;
+  }
+  #answer_text {
+    font-size: 24px;
+  }
+  #answer_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
 }

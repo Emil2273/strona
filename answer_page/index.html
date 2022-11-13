@@ -5,23 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>ANSWER</title>
+    <title>Answer</title>
 </head>
-<body> 
-    <div id="answer">
-        <div id="score">
-            <p id="correct_score">0</p>
-            <p id="incorrect_score">0</p>
+<body>
+    <header>
+        <nav>
+            <a href="../main_page/"><button type="button">MAIN PAGE</button></a>
+            <button>WORDS</button>
+        </nav>
+    </header>
+    <main>
+        <div id="answer">
+            <div id="score">
+                <p id="correct_score">0</p>
+                <p id="incorrect_score">0</p>
+            </div>
+            <span id="word">
+                <p></p>
+            </span>
+            <div id="validation">
+            </div>
+            <div id="answer_box">
+                <input type="text" id="answer_text">
+            </div>
         </div>
-        <div id="word">
-            <p>asdwa</p>
-        </div>
-        <div id="validation">
-        </div>
-        <div id="answer_box">
-            <input type="text" id="answer_text">
-        </div>
-    </div> 
+    </main> 
 </body>
 <script src="../scripts/script.js"></script>
 </html>
